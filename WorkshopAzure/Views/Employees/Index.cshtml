@@ -1,0 +1,25 @@
+﻿<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Foto</th>
+            <th scope="col">Nivel de sensualidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            List<Employee> Employees = (List<Employee>)ViewData["Employees"];
+            foreach (Employee emp in Employees){
+                <tr>
+                    <th scope="row">@emp.Id</th>
+                    <td>@emp.FirstName</td>
+                    <td>@emp.LastName</td>
+                    <td><img src="@Url.Content($"~/assets/{emp.PathToProfilePic}")" alt="foto" /></td>
+                    <td>@emp.SensualityLevelDescription</td>
+                </tr>
+            };
+        }
+</tbody>
+</table>
