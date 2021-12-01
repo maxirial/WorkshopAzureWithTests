@@ -20,11 +20,11 @@ namespace WorkshopAzureTests
 		}
 
 		[Fact]
-		public void Rola_Should_Be_Rola_Sexy_Test()
+		public void Nico_Should_Be_SuperHot_Test()
 		{
-			var rola = EmployeeManager.GetEmployees().FirstOrDefault(e => e.FirstName == "Rolando");
-			Assert.NotNull(rola);
-			Assert.Equal(SensualityLevel.Medium, rola.SensualityLevel);
+			var nico = EmployeeManager.GetEmployees().FirstOrDefault(e => e.FirstName == "Nicolás");
+			Assert.NotNull(nico);
+			Assert.Equal(SensualityLevel.SuperHot, nico.SensualityLevel);
 		}
 	}
 }
